@@ -1,0 +1,25 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js | pino-pretty"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^6.3.3",
+    "pino": "^7.11.0",
+    "node-fetch": "^2.6.1",
+    "pino-pretty": "^7.6.1"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4"
+  }
+}

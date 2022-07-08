@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  # flutter:
+  #   build: 
+  #     context: ./flutter_app
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "7070:7070"
+  #   command: >
+  #     sh -c "flutter pub get && flutter run -d web-server --web-port 7070 --web-hostname 0.0.0.0"
+  database:
+    image: mongo
+    restart: always 
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes: 
+      - my_data:/data/db 
+  node-web:
+    build: 
+      context: ..
+      dockerfile: Dockerfile
+    depends_on: 
+      - database
+    volumes: 
+      - /app/node_modules
+      - ./node-web:/app 
+    ports: 
+      - "8080:8080"
+  
+volumes: 
+  my_data:
