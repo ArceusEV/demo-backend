@@ -34,8 +34,8 @@ app.use(
 app.use(cors());
 
 //Routers
-const studentRoute = require("./routes/StudentRoute");
-app.use("/student", studentRoute);
+const chargerRoute = require("./routes/ChargertRoute");
+app.use("/charger", chargerRoute);
 
 //Listen Port
 app.listen(process.env.SERVER_PORT, process.env.SERVER_HOSTNAME,() => {
