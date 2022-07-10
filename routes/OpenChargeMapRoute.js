@@ -14,10 +14,7 @@ const logger = require("pino")({
 const open_charge_map_Route = express.Router();
 
 const AddressKeys = ["ID", "Title", "AddressLine1", "Latitude", "Longitude"];
-// Başka işe yarayabilecek datalar:
-// Distance
-// Connections - Level -IsFastChargeCapable
-// Connections - ConnectionType - Title
+// Başka işe yarayabilecek datalar: Distance
 
 
 open_charge_map_Route.route('/').get(async (req, res, next) =>{
@@ -45,8 +42,8 @@ open_charge_map_Route.route('/').get(async (req, res, next) =>{
         });
     }); 
 
-
     return res.status(200).json(returnJson);
+    
 });
 
 module.exports = open_charge_map_Route;
