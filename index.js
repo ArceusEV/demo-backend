@@ -36,8 +36,8 @@ app.use(cors());
 //Routers
 const chargerRoute = require("./routes/ChargertRoute");
 app.use("/charger", chargerRoute);
-const open_charge_map_Route = require("./routes/OpenChargeMapRoute");
-app.use("/map", open_charge_map_Route);
+const openChargeMapRoute = require("./routes/OpenChargeMapRoute");
+app.use("/map", openChargeMapRoute);
 
 //Listen Port
 app.listen(process.env.SERVER_PORT, process.env.SERVER_HOSTNAME,() => {
