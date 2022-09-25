@@ -38,6 +38,8 @@ const chargerRoute = require("./routes/ChargertRoute");
 app.use("/charger", chargerRoute);
 const openChargeMapRoute = require("./routes/OpenChargeMapRoute");
 app.use("/map", openChargeMapRoute);
+const ptf = require("./routes/Ptf");
+app.use("/ptf", ptf);
 
 //Listen Port
 app.listen(process.env.SERVER_PORT, process.env.SERVER_HOSTNAME,() => {

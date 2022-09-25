@@ -1,4 +1,9 @@
 # demo-backend
+
+-PTF ucuz olduğu saatler sorgulama(19.09.2022-25.09.2022 arasını döner)
+```
+http://0.0.0.0:8080/ptf
+```
 - OpenchargeMap'a request atma:
 ```
 http://0.0.0.0:8080/map?lat=37.0324684&lon=27.4038682&range=40
