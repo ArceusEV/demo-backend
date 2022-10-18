@@ -49,8 +49,8 @@ OpenChargeMapRoute.route('/').get(async (req, res, next) =>{
         const address_info = station.AddressInfo;
         const result_station = Object.fromEntries(Object.entries(address_info).filter(([key]) => AddressKeys.includes(key)));
         const connection_type = {"connection_type" : station.Connections[0].ConnectionType.Title}
-        const is_fast_charge = {"is_fast_charge" :station.Connections[0].Level.IsFastChargeCapable}
-        returnJson.push(Object.assign(result_station, connection_type, is_fast_charge));
+        // const is_fast_charge = {"is_fast_charge" :station.Connections[0].Level.IsFastChargeCapable}
+        returnJson.push(Object.assign(result_station, connection_type));
     });
 
 
